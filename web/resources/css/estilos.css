@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/dez/2015, 14:37:37
+    Author     : Igor
+*/
+body {margin-right: auto; margin-left: auto; padding: 0px; width: 100%; font-size: 13px;  height: 100%; min-width: 1024px; background-image:  url(../../imagens/global.jpg) ; background-size: 100% 100%; background-position:center; background-attachment: fixed;}
+.corpo  {max-width: 1024px; margin-right: auto; margin-left: auto;  }
+.fundologo {background:  url(../../imagens/back.png); margin-left: 0px; padding: 0px; width: 100%; height: 156px; margin-top: -8px;}
+
+.logo {background:  url(../../imagens/layout_set_logo.png) no-repeat; float: left; position: absolute; width: 85%; height: 156px; margin-top: -170px;}
+
+.morada {background:  url(../../imagens/morada.png) no-repeat; background-position: right ;  position: absolute; margin-right: 9cm;  width: 85%; height: 156px; margin-top: -170px;}
+
+
+

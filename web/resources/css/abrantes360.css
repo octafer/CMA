@@ -1,0 +1,977 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 4, 2016, 1:34:08 PM
+    Author     : pedro.santos
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-size: 14px !important;
+    background-color: #ececec;
+    overflow: auto !important;
+    
+}
+
+
+
+/* unvisited link */
+a:link {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* visited link */
+a:visited {
+     font-family: 'Roboto', sans-serif !important;
+}
+
+/* mouse over link */
+a:hover {
+   font-family: 'Roboto', sans-serif !important;
+}
+
+/* selected link */
+a:active {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.resetFont {
+  font-family: 'Roboto', sans-serif !important;    
+}
+.resetbackBorder {
+    background-color: transparent !important;
+    border: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.resetBorder.ui-panelgrid>*>tr,
+.resetBorder.ui-panelgrid .ui-panelgrid-cell {
+    border: none !important;
+} 
+    
+
+h2 {
+    margin: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+h3 {
+    margin: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 17px;
+    padding: 10px;
+    font-weight: 100;
+    color: #a9b6bf;
+}
+
+h4{
+    margin: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 19px;
+    padding: 10px;
+    font-weight: 100;
+    color: #f;
+}
+
+h1 {
+    margin: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 60px;
+    padding: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+h5 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px !important;
+    font-size: 14px;
+}
+
+hr {
+    border: 0; border-bottom: 1px dashed #ececec; background: #999;
+}
+
+i {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.header {
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color: #3c8dbc;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif !important;
+    padding-top: 12px;  
+}
+
+
+.headerPortal {
+    display: block;
+    height: 46px;
+    width: 100%;
+    background-color: #3c8dbc;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif !important;
+    padding-top: 12px;
+    border-bottom: 3px solid #3c8dbc;
+}
+
+.login {
+      float: right;
+}
+
+.headerInfo {
+      float: right !important;
+      padding-top: 13px;
+      color: #ffffff !important;
+      padding-right: 10px;
+      font-size: 12px;
+     
+}
+
+
+.loginBut {
+    background-color: #2a698d !important;
+    margin-left: 10px;
+}
+
+.loginBut:hover {
+    
+    background-color: #3178a1 !important;
+}
+
+.loginButPortal {
+    background-color: #2a698d !important;
+    margin-left: 10px;
+    height: 30px !important;
+    margin-top: -5px;
+    width: 50px !important;
+    padding-top: -20px !important;
+     font-family: 'Roboto', sans-serif !important;
+}
+
+.loginButPortal span {
+    margin-top: -4px;
+    margin-left: -10px;
+    
+}
+
+.loginButPortal:hover {
+    
+    background-color: #3178a1 !important;
+}
+
+
+.userFoto {
+ 
+    color: #8aa4af;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+.userName {
+    position: relative;
+    font-size: 12px !important;
+    padding-left: 45px;
+    top: -30px;
+   
+}
+
+.userPIC {
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+   
+}
+
+.logo {
+     position: absolute;
+     margin-left: -20px;
+     float: left;
+     width: 200px;
+     height: 50px;
+}
+
+.logoPortal {
+     position: absolute;
+     margin-top: -13px;
+     float: left;
+     width: 300px;
+     height: 63px;
+     background-color: #333;
+   
+}
+
+.logoPortal img {
+     padding-top: 6px;
+ 
+}
+
+.message {
+    display: block;
+    height:300px;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif !important;
+    padding-top: 80px;
+    padding-bottom: 20px;
+     background: url(../../resources/img/back_cma.jpg) no-repeat center center;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.loginRegister {
+    position: relative;
+    display: block;
+    width: 100%;
+    height:auto;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.loginOption {
+    float: left !important;
+    padding: 30px;
+    width: 250px;
+   
+
+}
+
+.loginOption div a {
+        color: #333 !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+}
+
+.loginOption div img {
+    position: relative;
+    margin: 0 auto;
+   
+}
+
+.imgLoginIcon {
+
+display: inline-block;
+box-sizing: border-box;
+width: 80px;
+height: 80px;
+vertical-align: middle;
+border-width: 1px;
+border-style: solid;
+border-color: #eee;
+border-radius: 50%;
+background-color: #fff;
+transition: all 0.3s;
+text-align: center;
+}
+
+.l1 {
+    position: relative !important;
+    top: -4px !important;
+
+}
+
+.titlel1 {
+ position:relative;
+ left: 0px;
+ text-align: left !important;
+
+}
+
+.descl1 {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 15px;
+    color: #999 !important;
+    text-align: left !important;
+    margin-top: 5px;
+    line-height: 18px;
+}
+
+.alignCenter {
+    width: 100%;
+    float: left;
+    
+    
+}
+
+.list-advantages__description {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #888;
+    font-family: 'Roboto', sans-serif !important;
+    text-align: left;
+}
+
+.list-advantages__description span {
+    text-align: left !important;
+}
+
+.list-advantages__name {
+    display: block;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #212121;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif !important;
+    text-align: left;
+}
+
+.list-advantages__name a {
+    display: block !important;
+    font-size: 14px !important;
+    color: #212121 !important;
+    text-transform: uppercase !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-decoration: none !important;
+}
+
+.list-advantages {
+  
+    margin-left: -50px;
+}
+
+.list-advantages__item {
+    display: inline-block;
+    min-width: 20%;
+    margin-right: -3px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.list-advantages__link {
+    display: block;
+    transition: all 0.3s;
+}
+
+.list-advantages__icon {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0D96BF;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.list-advantages__icon1 {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 50%;
+    background-color: #333;
+    text-align: center;
+}
+
+.list-advantages__inner {
+    display: inline-block;
+    width: 170px;
+    margin-left: 9px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.list-advantages__icon .icon {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 25px;
+    margin-left: 25px;
+    color: #0D96BF;
+}
+
+.list-advantages__icon1 .icon1 {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 25px;
+    margin-left: 25px;
+    color: #fff;
+}
+
+
+
+.cc_color {
+    display: block;
+    padding-left: 25px;
+    padding-top: 3px;
+    height: 24px;
+    background-image: url('../img/cc_color.png');
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.cc_cinza {
+    display: block;
+    padding-left: 25px;
+    padding-top: 3px;
+    height: 24px;
+    background-image: url('../img/cc_cinza.png');
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.dashCont {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.dashPanel {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-align: justify;
+}
+
+.footer {
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #7A7A7A;
+}
+
+
+.newsInformaCont {
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+   
+}
+
+.newsInforma {
+    width: 50%;
+    padding: 20px;
+}
+
+.newsInforma tbody tr td {
+
+   
+}
+
+.newsInforma tbody tr td div a {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 14px;
+  text-decoration: none;
+  color: #212121 !important;
+}
+
+
+.newsCont {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+   
+}
+
+
+
+.newsCont tbody tr td {
+   background-color: #ffffff;
+   list-style: none;
+   float:left;
+   text-align: left;
+   min-width: 200px;
+   max-width: 40%;
+   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+   border-radius: 2px;
+   padding: 10px;
+   margin-bottom: 20px;
+   margin-right: 20px;
+}
+
+.newsCont tbody tr td:first-child {
+    margin-left: 100px;
+}
+
+.newsContTitle {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif !important;
+    margin-bottom: 10px;
+    color: #3c8dbc;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ececec;
+}
+
+.newsContent {
+    font-family: 'Roboto', sans-serif;
+    
+    letter-spacing: 1px;
+    line-height: 1.3;
+    color: #5E5E5E;
+    font-size: 13px;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+   .newsCont tbody tr td {
+   background-color: #ffffff;
+   list-style: none;
+   float:left;
+   text-align: left;
+   min-width: 300px;
+   max-width: 100%;
+   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+   border-radius: 2px;
+   padding: 10px;
+   margin-bottom: 20px;
+    margin-right: 0px
+  
+}
+
+.newsCont tbody tr td:first-child {
+    margin-left: 0px;
+}
+
+
+
+
+}
+
+
+
+.menuLeft {
+    background-color: #222d32 !important;
+    border: none !important;
+}
+
+.painel-header {
+   overflow: hidden;
+
+}
+
+.painelPad {
+   padding-left: 10px !important;
+}
+
+.menuRight {
+    background-color: #ffffff !important;
+    border-left: 1px solid #ececec !important;
+    border: none !important;
+    overflow: hidden !important;
+    height: auto;
+
+}
+
+.menuRight p {
+    font-size: 12px !important;
+}
+
+.loaderBox {
+    background-color: #ffffff;
+    padding: 15px;
+    -moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px; /* future proofing */
+-khtml-border-radius: 50px; /* for old Konqueror browsers */
+}
+
+.ui-panel-titlebar {
+    background-color: #3c8dbc !important;
+     font-family: 'Roboto', sans-serif !important;
+}
+
+.ui-panel-content {
+     font-family: 'Roboto', sans-serif !important;
+    
+}
+
+.ui-layout-unit {
+    margin: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.ui-corner-all {
+    border-radius: 0px !important;
+}
+
+
+
+.ui-menu {
+    background-color: transparent !important;
+    font-size: 14px !important;
+}
+
+.ui-widget-header {
+    padding-left: 8px !important;
+   
+
+}
+
+.ui-menuitem-link{
+  font-size: 14px !important;  
+}
+
+.ui-menu.ui-menu-toggleable li.ui-widget-header {
+     background-color: transparent !important;
+}
+
+.ui-menu .ui-menuitem .ui-menuitem-link {
+    background-color: #2c3b41 !important;
+    color: #8aa4af !important;
+}
+
+.ui-widget, .ui-dialog-title {
+       font-family: 'Roboto', sans-serif !important;
+      
+}
+
+.ui-datatable-tablewrapper table tbody tr td {
+  font-family: 'Roboto', sans-serif !important;   
+}
+
+.ui-layout-unit-content {
+   
+}
+
+.headerScroll {
+    overflow: hidden !important;
+}
+
+.ui-widget-header h3 {
+    color: #b8c7ce !important;
+    font-size: 14px !important;
+    padding: 0px !important;
+}
+
+.ui-layout-unit {
+   
+}
+
+.ui-layout-unit-header-title {
+     font-family: 'Roboto', sans-serif !important;
+     font-weight: 200 !important;
+}
+
+.ui-layout-unit .ui-layout-unit-header {
+    background-color: #222d32 !important;
+}
+
+.layoutUnitCenterFix {
+padding-right: 20px !important;
+}
+
+.ui-panelgrid {
+    border-right: 0px !important;
+    border-left: 0px !important;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.ui-panelgrid tbody tr td {
+    border-right: 0px !important;
+    border-left: 0px !important;
+    border-top: 1px solid #ececec !important;
+    border-bottom: 1px solid #ececec !important;
+}
+
+.ui-panelgrid tbody tr {
+ 
+    padding: 10px !important;
+    margin-bottom: 30px !important;
+}
+
+.ui-panel-titlebar {
+
+  
+}
+
+.ui-panel .ui-panel-titlebar {
+    padding: 10px !important;
+    font-size: 15px;
+    color: #ffffff;
+    z-index: 100;
+    font-family: 'robotolight';
+    font-weight: normal;
+    border-radius: 1px !important;
+    -webkit-border-radius: 1px !important;
+    -moz-border-radius: 1px !important;
+    background-color: #2a698d !important;
+    margin: -2px;
+}
+
+.ui-grid-row {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.ui-inputtext {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.ui-inputfield {
+    font-size: 12px !important;
+    font-family: 'Roboto', sans-serif !important;
+    width: 80px;
+}
+
+.ui-datatable {
+    border: none !important;
+}
+
+.butAdjust {
+    margin-left: 10px !important;
+    margin-bottom: 5px !important;
+       font-family: 'Roboto', sans-serif !important;
+}
+
+.butAdjustDadosP {
+
+    margin-bottom: 5px !important;
+       font-family: 'Roboto', sans-serif !important;
+}
+
+.statesLegend {
+    position: relative;
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom:  15px !important;
+}
+
+.legendStates img {
+    position: relative;
+    margin-right: 5px !important;
+  
+}
+
+.labelSates label {
+    position: relative;
+    margin-right: 20px !important;
+    top: 0px;
+    font-size: 14px !important;
+}
+
+.labelSatesSC label {
+    position: relative;
+    margin-right: 20px !important;
+    top: -2px;
+    font-size: 14px !important;
+}
+
+.labelSatesLabelAdjust {
+    top: 0px !important;;
+}
+
+
+.butEscla {
+    height: auto;
+    margin-top: 5px;
+    margin-left: 8px;
+    width: auto;
+    padding: 2px;
+}
+
+.ui-layout-unit-content {
+    padding: 2px !important;
+}
+
+
+.footer {
+    position:relative;
+    bottom:0;
+    background-color: #303030;
+}
+
+.footerContent {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 14px;
+    background-color: #303030;
+line-height: 21px;
+color: #999
+}
+
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.ui-growl {
+    position: fixed;
+    width: 265px !important;
+    top: 30px !important;
+    right: 30px !important;
+    font-family: 'Roboto', sans-serif !important;
+ 
+}
+
+.ui-growl-title {
+    font-weight: 100 !important;
+}
+
+.ui-growl-message {
+      width: 175px !important;
+      font-family: 'Roboto', sans-serif !important;
+      padding: 5px;
+      padding-left: 15px;
+      margin-top: -5px !important;
+}
+
+
+.ui-growl-message p {
+    font-family: 'Roboto', sans-serif !important; 
+    font-size: 13px !important;
+} 
+
+.ui-shadow {
+    -moz-box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+    -webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+}
+
+.ui-layout-toggler-west {
+  margin-top: 10px !important;
+  margin-left: 5px !important;
+
+}
+
+.ui-layout-toggler-east {
+     margin-top: 10px !important;
+    margin-left: -3px !important;       
+}
+
+
+.ui-layout-resizer-west {
+   width: 50px !important; 
+   padding-right: 10px;
+}
+
+
+.ui-icon.white{ background-image: url(../img/ui-icons_ffffff_256x240.png); }
+
+.ui-column-title {
+   font-size: 12px !important;
+   font-weight: 100 !important;
+    font-family: 'Roboto', sans-serif !important; 
+}
+
+.gridStyleResponsive {
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+    float: left;
+    margin-left: 10px;
+     font-family: 'Roboto', sans-serif !important;
+}
+
+.gridStyleResponsiveLabel {
+    padding-right: 10px;
+    font-size: 13px !important;
+    margin-bottom: 20px;
+     font-family: 'Roboto', sans-serif !important;
+
+}
+
+.gridStyleResponsiveInput {
+     margin-right: 20px !important;
+     font-size: 13px !important;
+        margin-bottom: 20px;
+         font-family: 'Roboto', sans-serif !important;
+}
+
+
+.box80 {
+    width: 80px;
+}
+
+.box100 {
+    width: 100px;
+}
+
+.box200 {
+    width: 200px;
+}
+
+.box300 {
+    width: 300px;
+}
+
+
+
+
+@media screen and  (max-width: 900px) {
+
+    .gridStyleResponsive {
+      margin: 0px !important;
+        width: 90%;
+         float: left;
+    }    
+
+.gridStyleResponsiveLabel {
+    float: left;
+    width: 97%;
+    margin-bottom: 0px;
+
+}
+
+.gridStyleResponsiveInput {
+     float: left;
+     width: 97%;
+}
+
+
+.box80 {
+   float: left;
+    width: 97%;
+}
+
+.box100 {
+   float: left;
+     width: 97%;
+}
+
+.box200 {
+    float: left;
+     width: 97%;
+}
+
+.box300 {
+    float: left;
+     width: 97%;
+}
+
+}
+

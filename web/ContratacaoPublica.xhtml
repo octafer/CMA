@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+        <title>Contratação Pública</title>
+    </h:head>
+    
+    <h:body>
+        
+        <p:layout fullPage="true">
+
+            <p:layoutUnit position="north" size="100" header="Top" resizable="true" closable="true" collapsible="true">
+                <h:outputText value="User: #{mySessionBean.user}" /><br/>
+                <h:outputText value="PID: #{mySessionBean.pid}" />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" size="200" header="Left" resizable="true" closable="true" collapsible="true">
+                <h:outputText value="West unit content." />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="east" size="200" header="Right" resizable="true" closable="true" collapsible="true" effect="drop">
+                <h:outputText value="Right unit content." />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <h:form id="myform">
+
+                    <p:growl id="messages" showDetail="true" life="5000" /> 
+
+                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                    </p:confirmDialog>
+
+                    <p:panel>
+                        <p:commandButton value="Guardar" actionListener="#{dadosBean.guardarDadosPC()}" update=":myform:messages" />
+                        <p:panelGrid>
+                            <p:row>
+                                <p:column>Tipo de contratação:</p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{dadosBean.contratacao.tipoContratacao}" >
+                                        <f:selectItem itemLabel="Concurso Público" itemValue="Concurso Público" />
+                                        <f:selectItem itemLabel="Ajuste Direto" itemValue="Ajuste Direto" />
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Subtipo de contratação:</p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{dadosBean.contratacao.subTipoContratacao}" >
+                                        <f:selectItem itemLabel="ADS - Ajuste Direto Simplificado" itemValue="ADS - Ajuste Direto Simplificado" />
+                                        <f:selectItem itemLabel="AD1 - Ajuste Direto uma entidade" itemValue="AD1 - Ajuste Direto uma entidade" />
+                                        <f:selectItem itemLabel="ADV - Ajuste Direto várias entidades" itemValue="ADV - Ajuste Direto várias entidades" />
+                                        <f:selectItem itemLabel="CP - Concurso Público s/JOUE e s/Caução" itemValue="CP - Concurso Público s/JOUE e s/Caução" />
+                                        <f:selectItem itemLabel="CPC - Concurso Público s/JOUE e c/Caução" itemValue="CPC - Concurso Público s/JOUE e c/Caução" />
+                                        <f:selectItem itemLabel="CPJC - Concurso Público c/JOUE e c/Caução" itemValue="CPJC - Concurso Público c/JOUE e c/Caução" />                         
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Tipologia temporal:</p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{dadosBean.contratacao.tipologiaTemporal}" style="width:125px">
+                                        <f:selectItem itemLabel="Anual" itemValue="Anual" />
+                                        <f:selectItem itemLabel="Plurianual" itemValue="Plurianual" />
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Bens/Serviços:</p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{dadosBean.contratacao.bensServicos}" style="width:125px">
+                                        <f:selectItem itemLabel="Bens" itemValue="Bens" />
+                                        <f:selectItem itemLabel="Serviços" itemValue="Serviços" />
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>                            
+                            <p:row>
+                                <p:column>Limite de valores:</p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{dadosBean.contratacao.valoresLimite}" style="width:125px">
+                                        <f:selectItem itemLabel="-10.000€" itemValue="-10.000€" />
+                                        <f:selectItem itemLabel="+10.000€" itemValue="+10.000€" />
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Número de anos:</p:column>
+                                <p:column>
+                                    <p:inputText value="#{dadosBean.contratacao.numAnos}" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column colspan="2">
+
+                                    <p:dataTable id="tabVA" var="va" value="#{dadosBean.contratacao.lstValoresAno}">
+                                        <f:facet name="header">
+                                            Valores por ano
+                                        </f:facet>
+                                        <p:column headerText="Ano">
+                                            <h:outputText value="#{va.ano}" />
+                                        </p:column>
+                                        <p:column headerText="Valor (€)">
+                                            <h:outputText value="#{va.valor}" />
+                                        </p:column>
+
+                                        <p:column style="width:200px;text-align: center">
+                                            <p:commandButton oncomplete="PF('dlgEDI').show()" icon="ui-icon-gear" title="View" update=":dlgform:dEditVA">
+                                                <f:setPropertyActionListener value="#{va}" target="#{dadosBean.selectedValorAno}" />
+                                            </p:commandButton>
+                                            <p:commandButton update="tabVA" icon="ui-icon-trash" title="View" action="#{dadosBean.removerValorAno()}">
+                                                <f:setPropertyActionListener value="#{va}" target="#{dadosBean.selectedValorAno}" />
+                                                <p:confirm header="Confirmação" message="Tem a certeza que pretende remover o valor?" icon="ui-icon-alert" />
+                                            </p:commandButton>
+                                        </p:column>
+                                    </p:dataTable>
+                                    <p:commandButton value="Adicionar" oncomplete="PF('dlgDI').show();" />
+
+
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de elaboração de RI:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtElaboracaoRI}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Valor base:</p:column>
+                                <p:column>
+                                    <p:inputText value="#{dadosBean.contratacao.valorBase}" /> €
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Valor de adjudicação:</p:column>
+                                <p:column>
+                                    <p:inputText value="#{dadosBean.contratacao.valorAdjudicacao}" /> €
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de cabimento:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtCabimento}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data da Requisição Externa:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtReqExterna}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                             <p:row>
+                                <p:column>Data de autorização da despesa:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAutDesp}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de aprovação do parecer prévio:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAprovParecerPrevio}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data do anúncio:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAnuncio}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                                                        <p:row>
+                                <p:column>Data de envio de convite:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtEnvioConvite}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data receção de propostas:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtRececaoPropostas}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data envio de relatório preliminar:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtEnvioRelPreliminar}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de audiência prévia:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAudienciaPrevia}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de relatório final:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtRelatorioFinal}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de adjudicação:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAdjudicacao}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data do compromisso:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtCompromisso}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de envio para minuta:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtEnvioParaMinuta}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data de aprovação da minuta:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtAprovMinuta}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data da minuta:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtMinuta}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data documento habilitação:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtDocHabilitacao}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data do caução:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtCaucao}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>Data do contrato:</p:column>
+                                <p:column>
+                                    <p:calendar value="#{dadosBean.contratacao.dtContrato}" showOn="button" pattern="dd-MM-yyyy" />
+                                </p:column>
+                            </p:row>
+                        </p:panelGrid>
+                        <p:commandButton value="Guardar" actionListener="#{dadosBean.guardarDadosPC()}" update=":myform:messages" />
+                    </p:panel>
+
+                </h:form>
+                
+            </p:layoutUnit>
+
+        </p:layout>
+
+        
+        <h:form id="dlgform">
+
+            <p:dialog id="dEditVA" header="Editar valor por ano" widgetVar="dlgEDI" modal="true" visible="false" dynamic="true" resizable="false">
+
+                <p:panelGrid>
+                    <p:row>
+                        <p:column>Ano : </p:column><p:column><p:inputText id="anoEDI" value="#{dadosBean.selectedValorAno.ano}"/></p:column>
+                        <p:column>Valor : </p:column><p:column><p:inputText id="valorEDI" value="#{dadosBean.selectedValorAno.valor}"/>€</p:column>
+                    </p:row>
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Atualizar" action="#{dadosBean.editValorAno()}" update=":myform:tabVA :myform:messages :dlgform:anoEDI :dlgform:valorEDI" /> 
+                <p:commandButton value="Fechar" oncomplete="PF('dlgEDI').hide();" />
+
+            </p:dialog>
+
+            <p:dialog id="dAddVA" header="Adicionar valor por ano" widgetVar="dlgDI" modal="true" visible="false" dynamic="true" resizable="false">
+
+                <p:panelGrid>
+                    <p:row>
+                        <p:column>Ano : </p:column><p:column><p:inputText id="anoDI" value="#{dadosBean.addValorAno.ano}"/></p:column>
+                        <p:column>Valor : </p:column><p:column><p:inputText id="valorDI" value="#{dadosBean.addValorAno.valor}"/>€</p:column>
+                    </p:row>
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Adicionar" actionListener="#{dadosBean.addNewValorAno()}" update=":myform:tabVA :myform:messages :dlgform:anoDI :dlgform:valorDI" /> 
+                <p:commandButton value="Fechar" oncomplete="PF('dlgDI').hide();" />
+
+            </p:dialog>
+
+        </h:form>
+        
+        
+    </h:body>
+
+</html>
+

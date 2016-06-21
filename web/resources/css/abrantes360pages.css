@@ -1,0 +1,270 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 12, 2016, 9:18:05 AM
+    Author     : pedro.santos
+*/
+
+* {
+   font-family: 'Roboto', sans-serif !important; 
+  
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-size: 14px !important;
+    background-color: #ececec;
+    overflow: auto !important;
+    
+}
+
+
+h2 {
+       font-family: 'Roboto', sans-serif !important; 
+       font-size: 20px;
+       margin: 0px;
+       padding: 0px;
+       color: #546e7a;
+       font-weight: 100;
+}
+
+h3 {
+       font-family: 'Roboto', sans-serif !important;
+       font-size: 13px;
+       color: #546e7a;
+       font-weight: 100;
+}
+
+.headerPages {
+    display: block;
+    height: 55px;
+    width: 100%;
+    background-color: #3c8dbc;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif !important;
+    padding-top: 12px;
+    border-bottom: 3px solid #3c8dbc;
+}
+
+
+
+
+.logo {
+     margin: 0 auto;
+     width: 170px;
+     padding-bottom: 10px;
+
+   
+}
+
+.ccContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 240px;
+    margin-top: -140px; /* -(1/2 height) */
+    margin-left: -170px; /* -(1/2 width) */
+    padding: 20px;
+    font-size: 11px !important;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ccContainer2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 930px;
+    height: 500px;
+    margin-top: -280px; /* -(1/2 height) */
+    margin-left: -485px; /* -(1/2 width) */
+    padding: 20px;
+    font-size: 11px !important;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ccContainer3 {
+    margin: 70px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    font-size: 11px !important;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.49);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+}
+
+.ccContainer table, .ccContainer2 table {
+    border: 0px !important;
+}
+
+.ccContainer table tbody tr, .ccContainer2 table tbody tr {
+    border-bottom: 0px solid #ececec !important;
+}
+
+.ccContainer table tbody tr td,.ccContainer2 table tbody tr td {
+    border: 0px !important;
+    font-size: 13px !important;
+}
+
+.loaderBox {
+    background-color: #ffffff;
+    padding: 15px;
+    -moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px; /* future proofing */
+-khtml-border-radius: 50px; /* for old Konqueror browsers */
+}
+
+
+.ui-growl {
+    position: fixed;
+    width: 265px !important;
+    top: 30px !important;
+    right: 30px !important;
+    font-family: 'Roboto', sans-serif !important;
+ 
+}
+
+.ui-growl-title {
+    font-weight: 100 !important;
+}
+
+.ui-growl-message {
+      width: 175px !important;
+      font-family: 'Roboto', sans-serif !important;
+      padding: 5px;
+      padding-left: 15px;
+      margin-top: -5px !important;
+}
+
+
+.ui-growl-message p {
+    font-family: 'Roboto', sans-serif !important; 
+    font-size: 13px !important;
+} 
+
+.ui-shadow {
+    -moz-box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+    -webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.8) !important;
+}
+
+.ui-inputtext {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.ui-inputfield {
+    font-size: 12px !important;
+    font-family: 'Roboto', sans-serif !important;
+    width: 80px;
+}
+
+.ui-inputfield.ui-inputtextarea {
+    min-width: 400px !important;
+}
+
+.ui-fieldset,.ui-fieldset-content, .ui-fieldset-legend, .ui-selectonemenu-label {
+      font-family: 'Roboto', sans-serif !important; 
+     font-size: 14px !important;
+}
+.ui-selectonemenu-trigger {
+    height: 34px !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-label {
+    border-bottom: 0px solid !important;
+}
+
+.ui-column-title {
+      font-family: 'Roboto', sans-serif !important; 
+     font-size: 12px !important;
+}
+
+.iconInformation {
+  
+    display: block;
+    margin-top: -90px;
+    float: right;
+    margin-right: 5px;
+    font-family: 'Roboto', sans-serif !important; 
+    font-size: 15px !important;
+    color: #546e7a;
+    cursor: pointer;
+}
+
+.ui-panelgrid {
+    border-right: 0px solid !important;
+    border-left: 0px solid !important;
+    border-top: 0px solid !important;
+    border-bottom: 0px solid !important;
+}
+
+
+.ui-panelgrid tbody tr td {
+    border-right: 0px solid !important;
+    border-left: 0px solid !important;
+    border-top: 0px solid #ececec !important;
+    border-bottom: 1px solid #ececec !important;
+}
+
+.ui-panelgrid tbody tr {
+ 
+    padding: 10px !important;
+    margin-bottom: 30px !important;
+}
+
+.ui-panelgrid-cell {
+   font-family: 'Roboto', sans-serif !important; 
+    font-size: 13px !important; 
+    color: #546e7a !important;
+}
+
+.ui-scrollpanel {
+  font-family: 'Roboto', sans-serif !important;
+    font-size: 13px !important;    
+}
+
+.scroolMe, .mCustomScrollbar.ui-dialog {
+    font-family: 'Roboto', sans-serif !important; 
+    font-size: 13px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.iconsBib {
+
+    margin-top: 10px;
+}
+
+
+.ui-dialog-content {
+    overflow: hidden !important;
+}
